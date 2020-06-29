@@ -1,10 +1,7 @@
-x = float(input("please input x:"))
-a = 2
-b = -45
-c = 13
-y = a * x ** 2 + b * x + c
-print('x =', x)
-print('y =', y)
-# x=0,y=13
-# x=10,y=-237
-# x=-30,y=3163
+import random
+
+menu = ["coffee", "tea", "cola", "milk", "water"] 
+print("Menu:", menu) 
+name = input("Your name please:") 
+drink = random.choice(menu)
+print("Hello", name, "! Enjoy your", drink)

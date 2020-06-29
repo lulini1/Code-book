@@ -1,4 +1,14 @@
-n = int(input("please input line number:"))
-for i in range(n):
-    line = " " * (n-1-i) + "@" * (2 * i + 1)
-    print (line)
+import turtle 
+
+size =int(input("please input size:(20~200)"))
+
+t = turtle.Turtle()
+t.color('red')
+t.pensize(3)
+
+for i in range(5):
+    t.forward(size)
+    t.right(144)
+
+t.hideturtle()
+turtle.done()
