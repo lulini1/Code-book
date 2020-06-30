@@ -1,1 +1,5 @@
 print("Hello VScode")
+r = int(input())
+l = round(2*3.14159*r, 4)
+s = round(3.14159*r*r,4)
+print(l,s)
