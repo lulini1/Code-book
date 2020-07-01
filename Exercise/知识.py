@@ -53,3 +53,24 @@ turtle.done()
 #反向输出一个三位数
 s_list = input('')
 print(s_list[::-1])#切片
+#如何用循环语句画出一个4种颜色边的正方形？•四种颜色的列表
+import turtle
+
+t = turtle.Turtle()
+
+t.pensize(5)
+#n = 4
+
+colors = ['red','green','blue','yellow']
+
+for c in colors:
+    t.pencolor(c)
+    t.fd(100)
+    t.lt(90)
+
+
+
+
+
+t._tracer(0)
+t.updata(0)
