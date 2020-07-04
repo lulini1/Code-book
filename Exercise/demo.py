@@ -2,47 +2,30 @@ import turtle
 import math
 import random
 
+def tree(branch_len):
+    if branch_len>5:
+        c = ['light pink','misty rose']
+        color = random.choice(c)
+        if branch_len<20:
+            t.pensize(6)
+            print(color)
+            t.color(color)
+        else:
+            t.pensize(10)
+            t.color('saddle brown')
+        i = random.randint(15,45)
+        t.fd(branch_len)
+        t.rt(i)
+        tree(branch_len-15)
+        t.lt(2*i)
+        tree(branch_len-15)
+        t.rt(i)
+        t.backward(branch_len)
 
-
-def polygon(n,size,color):
-    t.color(color)
-    t.begin_fill()
-    for i in range(n):
-        t.forward(size)
-        t.left(360/n)
-    t.end_fill()
-
-def star(size,color):
-    t.fillcolor(color)
-    t.begin_fill()
-    for i in range(5):
-        t.forward(size)
-        t.left(72)
-        t.forward(size)
-        t.right(144)
-    t.end_fill()
-
-def flower(size):
-    for i in range(5):
-        t.forward(2 * size* (1 + math.sin(18 * math.pi / 180)))
-        t.right(36)
-        polygon(5,size,'pink')
-        t.right(108)
-    star(size, 'purple')
-
-turtle.tracer(0)
 t = turtle.Turtle()
-t.pencolor('white')
-
-for i in range(20):
-    t.penup()
-    t.goto(random.randint(-200,200),random.randint(-200,200))
-    t.pendown()
-    head = random.randint(1,9)
-    t.setheading(head * 40)
-    size = random.randint(10,25)
-    flower(size)
+t.left(90)
+t.back(50)
+tree(100)
 
 t.hideturtle()
-turtle.update()
 turtle.done()

@@ -10,13 +10,16 @@ def fibonacci(n):
 
 
 def golden_spiral(n):
+    #if  n > 2:
+        #t.circle(fibonacci(n),90)
+        #golden_spiral(n - 1)
         for i in range(1,n):
             t.circle(fibonacci(i),90)
             i = i + 1
 
 t = turtle.Turtle()
 
-golden_spiral(12)
+golden_spiral(18)
 
 t.hideturtle()
 turtle.done()
