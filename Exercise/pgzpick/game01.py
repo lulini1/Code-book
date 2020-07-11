@@ -7,7 +7,7 @@ WIDTH = 500
 HEIGHT = alien.height + 0
 
 backg = 128
-
+alien.angle = 0
 def draw():
     global backg
     screen.clear()
@@ -20,6 +20,9 @@ def update():
     backg += 1
     if backg > 255:
         backg = 128
+    alien.angle += 2
+    if alien.angle > 360:
+        alien.angle = 0
     alien.left = alien.left + 2
     if alien.left > WIDTH:
         alien.left = 0
